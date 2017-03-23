@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.group5.cap4104.candyland.MainActivity"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/titleImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/candy_land"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"/>
+
+    <Button
+        android:id="@+id/startGameBtn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Start Game"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/continueGameBtn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startGameBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Continue Game"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/settingsBtn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/continueGameBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Settings"
+        android:textSize="25sp"/>
+
+</RelativeLayout>
