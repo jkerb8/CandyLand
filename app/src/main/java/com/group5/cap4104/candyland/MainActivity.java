@@ -8,9 +8,11 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button startGameBtn, continueGameBtn, settingsBtn;
+    BoardSetup board;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -25,10 +27,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    // The Candyland deck consists of 66 cards. There are 6 cards representing special locations,
+    // and 60 cards split into six different colors.
+    // In each color there are 8 single move cards and 2 double move cards.
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.startGameBtn:
+
+                setContentView(R.layout.board_setup);
+                board.assignCards();
                 //code to start the game
                 //need to create a new activity and kick it off here
 
