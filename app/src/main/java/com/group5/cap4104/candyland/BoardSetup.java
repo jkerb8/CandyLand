@@ -6,12 +6,12 @@ import java.util.*;
 
 public class BoardSetup {
 
-    public int[] boardSpaces = new int[134];
+    public String[] boardSpaces = new String[139];
     public ArrayList<Integer> drawCards = new ArrayList<>();
 
     public void assignCards() {
 
-        for (int i=0; i<6; i++) {
+        for (int i = 0; i < 6; i++) {
             drawCards.add(R.drawable.sb);
             drawCards.add(R.drawable.sg);
             drawCards.add(R.drawable.so);
@@ -20,7 +20,7 @@ public class BoardSetup {
             drawCards.add(R.drawable.sy);
         }
 
-        for (int i=0; i<2; i++) {
+        for (int i = 0; i < 2; i++) {
             drawCards.add(R.drawable.db);
             drawCards.add(R.drawable.dg);
             drawCards.add(R.drawable.db);
@@ -39,5 +39,28 @@ public class BoardSetup {
         Collections.shuffle(drawCards);
     }
 
+
+    /**
+     * 0 starting
+     * 134 win
+     *
+     * 5 skip to 57
+     * 32 skips to 45
+     *
+     * 46 is skip
+     * 84 is skip
+     * 119 is skip
+     *
+     * 8 plum
+     * 18 candycane
+     * 41 gumdrop
+     * 73 peanut
+     * 94 lollipop
+     * 102 snowflake
+     */
+    public void assignSpaces() {
+
+
+    }
 
 }
