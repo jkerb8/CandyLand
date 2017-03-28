@@ -96,4 +96,5 @@ public class CreateAccountActivity extends Activity {
         m_currentToast = Toast.makeText(this, message, Toast.LENGTH_LONG);
         m_currentToast.show();
     }
+
 }

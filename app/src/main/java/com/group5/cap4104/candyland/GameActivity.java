@@ -22,7 +22,8 @@ public class GameActivity extends Activity implements View.OnClickListener {
     private Button drawCardBtn;
     private TextView bannerText;
     private ImageView playerTurnIV;
-    private String[] boardSpaces = new String[139];
+    private String[] boardSpaces = new String[135];
+    private String[] colors = new String[6];
     private ArrayList<Integer> drawCards = new ArrayList<>();
     Toast m_currentToast;
 
@@ -49,6 +50,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
         }
         else {
             assignCards();
+            assignSpaces();
         }
     }
 
@@ -150,7 +152,6 @@ public class GameActivity extends Activity implements View.OnClickListener {
         Collections.shuffle(drawCards);
     }
 
-
     /**
      * 0 starting
      * 134 win
@@ -171,6 +172,42 @@ public class GameActivity extends Activity implements View.OnClickListener {
      */
     public void assignSpaces() {
 
+        colors[0] = "red";
+        colors[1] = "purple";
+        colors[2] = "yellow";
+        colors[3] = "blue";
+        colors[4] = "orange";
+        colors[5] = "green";
+
+        boardSpaces[0] = "start"; // not seen on board
+        boardSpaces[135] = "win"; // not seen on board
+        boardSpaces[5] = "skipfrom1";
+        boardSpaces[57] = "skipto1";
+        boardSpaces[32] = "skipfrom2";
+        boardSpaces[45] = "skipto2";
+        boardSpaces[46] = "stop1";
+        boardSpaces[84] = "stop2";
+        boardSpaces[119] = "stop3";
+        boardSpaces[8] = "plum";
+        boardSpaces[18] = "candycane";
+        boardSpaces[41] = "gumdrop";
+        boardSpaces[73] = "peanut";
+        boardSpaces[94] = "lollipop";
+        boardSpaces[102] = "snowflake";
+
+        int i = 0;
+        int j = 0;
+        while (i < 136) {
+            if(boardSpaces[i].isEmpty()) {
+                if (j == 6)
+                    j = 0;
+                boardSpaces[i] = colors[j];
+                j++;
+                i++;
+            }
+            else
+                i++;
+        }
 
     }
 
