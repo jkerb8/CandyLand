@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.kerbysoft.qwikcut.speakstats.LaxGameActivity">
+    <!-- "Mark Favorite", should appear as action button if possible -->
+
+
+    <item
+        android:id="@+id/saveBtn"
+        android:icon="@drawable/ic_action_content_save"
+        android:title="Save Game"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/settingsBtn"
+        android:title="Settings"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/exitGameBtn"
+        android:title="Exit Game"
+        app:showAsAction="never"/>
+
+
+</menu>

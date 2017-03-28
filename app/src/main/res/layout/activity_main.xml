@@ -13,36 +13,51 @@
         android:layout_height="200dp"
         android:src="@drawable/candy_land"
         android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
         android:scaleType="fitXY"/>
 
     <Button
         android:id="@+id/startGameBtn"
+        style="@style/ButtonTheme"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/titleImageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:text="Start Game"
-        android:textSize="25sp"/>
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/continueGameBtn"
+        style="@style/ButtonTheme"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/startGameBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:text="Continue Game"
-        android:textSize="25sp"/>
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/settingsBtn"
+        style="@style/ButtonTheme"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/continueGameBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:text="Settings"
-        android:textSize="25sp"/>
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        style="@style/ButtonTheme"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settingsBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Log Out"
+        android:textSize="25sp" />
 
 </RelativeLayout>

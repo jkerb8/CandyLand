@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.group5.cap4104.candyland.GameActivity"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Let's play Candy Land! Who's turn is it?"
+        android:textColor="#000000"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/board"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/board"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/banner"/>
+
+    <Button
+        android:id="@+id/drawCardBtn"
+        style="@style/ButtonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Draw Card"
+        android:textSize="25sp"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="100dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/playerTurnImageView"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:src="@drawable/blank"
+        android:layout_above="@+id/drawCardBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp" />
+
+
+
+
+</RelativeLayout>
