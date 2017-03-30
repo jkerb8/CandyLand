@@ -12,14 +12,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     Button startGameBtn, continueGameBtn, settingsBtn, logOutBtn;
     Boolean loggedIn;
+    int players;
+
+    CharSequence players[] = new CharSequence[] {"1", "2", "3", "4"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
         loggedIn = !(SaveSharedPreference.getUserName(getApplicationContext()).length() == 0);
 
@@ -46,6 +47,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.startGameBtn:
 
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("How many players?").setItems(players, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // The 'which' argument contains the index position
+                        // of the selected item
+                    }
+                });
+
+                builder.create();
                 Intent intent = new Intent(MainActivity.this, GameActivity.class);
                 intent.putExtra("openingPastGame", "false");
                 startActivity(intent);
