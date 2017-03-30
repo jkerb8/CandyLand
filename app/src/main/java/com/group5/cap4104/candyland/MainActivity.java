@@ -12,7 +12,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     Button startGameBtn, continueGameBtn, settingsBtn, logOutBtn;
     Boolean loggedIn;
-    int players;
 
     CharSequence players[] = new CharSequence[] {"1", "2", "3", "4"};
 
