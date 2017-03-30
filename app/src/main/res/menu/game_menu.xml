@@ -4,7 +4,6 @@
     tools:context="com.kerbysoft.qwikcut.speakstats.LaxGameActivity">
     <!-- "Mark Favorite", should appear as action button if possible -->
 
-
     <item
         android:id="@+id/saveBtn"
         android:icon="@drawable/ic_action_content_save"

@@ -34,4 +34,5 @@ public class SaveSharedPreference
     public static String getPassword(Context ctx) {
         return getSharedPreferences(ctx).getString(PREF_PASSWORD, "");
     }
+
 }

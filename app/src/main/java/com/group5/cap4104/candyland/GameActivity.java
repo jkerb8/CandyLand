@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class GameActivity extends Activity implements View.OnClickListener {
 
@@ -58,13 +59,21 @@ public class GameActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.drawCardBtn:
-                //drawCard();
+                drawCard();
 
                 break;
 
             default:
                 //idk
         }
+    }
+
+    private void drawCard() {
+
+        Random rand = new Random();
+        Integer randomInt = drawCards.get(rand.nextInt(drawCards.size()));
+        playerTurnIV.setImageResource(randomInt);
+        drawCards.remove(randomInt);
     }
 
     @Override
@@ -210,7 +219,6 @@ public class GameActivity extends Activity implements View.OnClickListener {
         }
 
     }
-
 
     public void showMessage(String message) {
         if(m_currentToast != null)
