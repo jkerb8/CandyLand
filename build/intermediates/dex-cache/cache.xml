@@ -2,22 +2,292 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/home/nuc/git/CandyLand/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\7886c17c2ae70c2a2de59c01b6b53d4bcfb20f82\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="6f0e3205eff25d90c0856c4bded3608b6db10449">
-        <dex dex="/home/nuc/git/CandyLand/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7ec3326eb319aa81cddcf7304a0701ed0d56fefb/classes.dex" />
+        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_ec94f4e5a3b421583cbcbd60ed2d1b5ddc75485d.jar" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/nuc/git/CandyLand/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.0_1939f5ba3c98ed45e59dd8880f357185b938b989\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\cfc3a7e6eb86188856ae82db9bb3339c202a445c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_f093c3d5d487ef3fbb119f1c8e46d4e787e4632c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.0_1939f5ba3c98ed45e59dd8880f357185b938b989.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\cfc3a7e6eb86188856ae82db9bb3339c202a445c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f093c3d5d487ef3fbb119f1c8e46d4e787e4632c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\33a1d18cac9be6d2a3b463a38d101d789270666f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_cb83408d077a4f930172411e2535c343a6daf8ca\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\a188fea0784b9718a66cdf1c9f31803f4c3a1bd3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_2ec4dd4dc3768fa2d0e820c48361ed5379dcddb5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\9c98dbfe4f218e21f08ae9c65e3981d9ef276f45\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9fc39f0d30fbeb741074a27043870fadead7f979\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\b0ecf0d9293b8ad4ade94ac5c7137eb198c5c9a0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dddfa171562be540d956c71039dcc6d9d285a5da\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\b0ecf0d9293b8ad4ade94ac5c7137eb198c5c9a0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_dddfa171562be540d956c71039dcc6d9d285a5da.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\9c98dbfe4f218e21f08ae9c65e3981d9ef276f45\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_9fc39f0d30fbeb741074a27043870fadead7f979.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\b02c074e0c2b652974643009780e61eefe768ea6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c3f0aa324ca82c1a4d5062d5eb5b210247a92b6e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\a188fea0784b9718a66cdf1c9f31803f4c3a1bd3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2ec4dd4dc3768fa2d0e820c48361ed5379dcddb5\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\8d08b4d1be76d39ba0e4b92976b1e754d1ff40c2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_092858d376c422c28e8659d3fc0b13f13ff013a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\b02c074e0c2b652974643009780e61eefe768ea6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_c3f0aa324ca82c1a4d5062d5eb5b210247a92b6e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\8d08b4d1be76d39ba0e4b92976b1e754d1ff40c2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_092858d376c422c28e8659d3fc0b13f13ff013a7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\bfbfabdd9a4332625a2f0d1740afc2c8e5d30eed\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b8f3a0881027e9660ea599477d8b083c3c0d8b10\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\76e0bc34f230d9e7549e6f49f887d8ea0d380041\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_13737ffc41f4226da087ab18f4b5cd021fb62ef0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\33a1d18cac9be6d2a3b463a38d101d789270666f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_cb83408d077a4f930172411e2535c343a6daf8ca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\bfbfabdd9a4332625a2f0d1740afc2c8e5d30eed\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_b8f3a0881027e9660ea599477d8b083c3c0d8b10.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\31d05a6dfaf28a76aea84939d2d48729b775f952\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f58aa8df880c2b614aa0fbd389d7309f484ed516\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\9aedea5e8c20916465ff15e158bb57f28d058862\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ecf1f3033be4aa320b5cc3da43d7c8ee54fb1514\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\76e0bc34f230d9e7549e6f49f887d8ea0d380041\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_13737ffc41f4226da087ab18f4b5cd021fb62ef0\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\9aedea5e8c20916465ff15e158bb57f28d058862\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_ecf1f3033be4aa320b5cc3da43d7c8ee54fb1514.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\31d05a6dfaf28a76aea84939d2d48729b775f952\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_f58aa8df880c2b614aa0fbd389d7309f484ed516.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Repos\CandyLand\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="/home/nuc/git/CandyLand/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a77eb382129e6dcedb8975a2c6305f4f1f483642/classes.dex" />
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_7f1a30a9be5be0d8bf19778a20cb93c4cc2b1e7b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Repos\CandyLand\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d1c9a96f0fce3988bfbc81462178f926b22cf498">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_14dad2e15e0ab287b28e416e42d43e8f90ae42d5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\f23b43a854f02a2328947d106774856486464dc2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_428f974d49de62b7bc26d8b3f40fb3f4c5063918\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_3c9f5880fec0a880f40ecbbebb3a60ccb1f35afa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Command Center\.android\build-cache\f23b43a854f02a2328947d106774856486464dc2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\pre-dexed\debug\classes_428f974d49de62b7bc26d8b3f40fb3f4c5063918.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_3c9f5880fec0a880f40ecbbebb3a60ccb1f35afa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Command Center\.android\build-cache\7886c17c2ae70c2a2de59c01b6b53d4bcfb20f82\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
+        <dex dex="E:\Repos\CandyLand\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ec94f4e5a3b421583cbcbd60ed2d1b5ddc75485d\classes.dex" />
     </item>
 
 </items>

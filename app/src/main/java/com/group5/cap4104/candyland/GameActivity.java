@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,7 +24,11 @@ public class GameActivity extends Activity implements View.OnClickListener {
     private String[] boardSpaces = new String[135];
     private String[] colors = new String[6];
     private ArrayList<Integer> drawCards = new ArrayList<>();
+    private String playerCountArray[] = new String[] {"1","2","3","4"};
+    private int playerCount;
     Toast m_currentToast;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,12 +49,22 @@ public class GameActivity extends Activity implements View.OnClickListener {
         Intent intent = getIntent();
 
         if (intent.getStringExtra("openingPastGame").equals("true")) {
-            //load past game
+
+            assignCards();
+            assignSpaces();
+
         }
         else {
+
             assignCards();
             assignSpaces();
         }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        pickPlayerCount();
     }
 
     @Override
@@ -228,4 +240,20 @@ public class GameActivity extends Activity implements View.OnClickListener {
         m_currentToast = Toast.makeText(this, message, Toast.LENGTH_LONG);
         m_currentToast.show();
     }
+
+    public void pickPlayerCount () {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("How many players")
+                .setItems(playerCountArray, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                if (id == 0) playerCount = 1;
+                if (id == 1) playerCount = 2;
+                if (id == 2) playerCount = 3;
+                if (id == 3) playerCount = 4;
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
 }
