@@ -28,8 +28,6 @@ public class GameActivity extends Activity implements View.OnClickListener {
     private int playerCount;
     Toast m_currentToast;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,9 +50,10 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
             assignCards();
             assignSpaces();
-
         }
+
         else {
+
 
             assignCards();
             assignSpaces();
@@ -65,6 +64,8 @@ public class GameActivity extends Activity implements View.OnClickListener {
     protected void onStart() {
         super.onStart();
         pickPlayerCount();
+        bannerText.setText("Player 1 it's your turn");
+
     }
 
     @Override
@@ -202,13 +203,13 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
         boardSpaces[0] = "start"; // not seen on board
         boardSpaces[135] = "win"; // not seen on board
-        boardSpaces[5] = "skipfrom1";
-        boardSpaces[57] = "skipto1";
-        boardSpaces[32] = "skipfrom2";
-        boardSpaces[45] = "skipto2";
-        boardSpaces[46] = "stop1";
-        boardSpaces[84] = "stop2";
-        boardSpaces[119] = "stop3";
+        // boardSpaces[5] = "skipfrom1";
+        // boardSpaces[57] = "skipto1";
+        // boardSpaces[32] = "skipfrom2";
+        // boardSpaces[45] = "skipto2";
+        // boardSpaces[46] = "stop1";
+        // boardSpaces[84] = "stop2";
+        // boardSpaces[119] = "stop3";
         boardSpaces[8] = "plum";
         boardSpaces[18] = "candycane";
         boardSpaces[41] = "gumdrop";
@@ -229,7 +230,6 @@ public class GameActivity extends Activity implements View.OnClickListener {
             else
                 i++;
         }
-
     }
 
     public void showMessage(String message) {
