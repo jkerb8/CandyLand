@@ -21,11 +21,13 @@ public class GameActivity extends Activity implements View.OnClickListener {
     private Button drawCardBtn;
     private TextView bannerText;
     private ImageView playerTurnIV;
-    private String[] boardSpaces = new String[135];
+    private String[] boardSpaces = new String[137];
     private String[] colors = new String[6];
     private ArrayList<Integer> drawCards = new ArrayList<>();
-    private String playerCountArray[] = new String[] {"1","2","3","4"};
-    private int playerCount;
+    private String playerCountArray[] = new String[] {"2","3","4"};
+    private ArrayList<String> colorPieces;
+    private ArrayList<Player> players;
+    private int playerCount, currentTurn;
     Toast m_currentToast;
 
 
@@ -45,6 +47,15 @@ public class GameActivity extends Activity implements View.OnClickListener {
         playerTurnIV = (ImageView) findViewById(R.id.playerTurnImageView);
         //example: playerTurnIV.setImageResource(R.drawable.plumcard);
 
+        colorPieces = new ArrayList<>();
+        colorPieces.add("Blue");
+        colorPieces.add("Green");
+        colorPieces.add("Yellow");
+        colorPieces.add("Red");
+
+        players = new ArrayList<>();
+        currentTurn = 0;
+
         //gets the previously created intent
         Intent intent = getIntent();
 
@@ -59,12 +70,14 @@ public class GameActivity extends Activity implements View.OnClickListener {
             assignCards();
             assignSpaces();
         }
+
+        //This needs to be in onCreate, not onStart
+        pickPlayerCount();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        pickPlayerCount();
     }
 
     @Override
@@ -72,15 +85,17 @@ public class GameActivity extends Activity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.drawCardBtn:
                 drawCard();
-
+                nextTurn();
                 break;
 
             default:
-                //idk
+                //formality
         }
     }
 
     private void drawCard() {
+        if (drawCards.size() == 0)
+            assignCards();
 
         Random rand = new Random();
         Integer randomInt = drawCards.get(rand.nextInt(drawCards.size()));
@@ -201,7 +216,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
         colors[5] = "green";
 
         boardSpaces[0] = "start"; // not seen on board
-        boardSpaces[135] = "win"; // not seen on board
+        boardSpaces[134] = "win"; // not seen on board
         boardSpaces[5] = "skipfrom1";
         boardSpaces[57] = "skipto1";
         boardSpaces[32] = "skipfrom2";
@@ -219,17 +234,23 @@ public class GameActivity extends Activity implements View.OnClickListener {
         int i = 0;
         int j = 0;
         while (i < 136) {
-            if(boardSpaces[i].isEmpty()) {
+            if(boardSpaces[i] == null) {
                 if (j == 6)
                     j = 0;
                 boardSpaces[i] = colors[j];
                 j++;
-                i++;
             }
-            else
-                i++;
+            i++;
         }
 
+    }
+
+    public void nextTurn() {
+        currentTurn++;
+
+        if (currentTurn > playerCount) currentTurn = 1;
+
+        bannerText.setText("Player " + currentTurn + ", draw a card!");
     }
 
     public void showMessage(String message) {
@@ -246,14 +267,33 @@ public class GameActivity extends Activity implements View.OnClickListener {
         builder.setTitle("How many players")
                 .setItems(playerCountArray, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                if (id == 0) playerCount = 1;
-                if (id == 1) playerCount = 2;
-                if (id == 2) playerCount = 3;
-                if (id == 3) playerCount = 4;
+                if (id == 0) playerCount = 2;
+                if (id == 1) playerCount = 3;
+                if (id == 2) playerCount = 4;
+
+                pickColorPieces(playerCount, colorPieces);
             }
         });
         AlertDialog alert = builder.create();
         alert.show();
     }
+
+    public void pickColorPieces(final int playersLeft, final ArrayList<String> colors) {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Player " + (playerCount - playersLeft + 1) + ", pick the color of your game piece.")
+                .setItems(colors.toArray(new String[colors.size()]), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        players.add(new Player(colors.get(id)));
+                        colors.remove(id);
+
+                        if (playersLeft > 1) pickColorPieces(playersLeft - 1, colors);
+                        else nextTurn();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+
 
 }
