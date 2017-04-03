@@ -217,13 +217,13 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
         boardSpaces[0] = "start"; // not seen on board
         boardSpaces[134] = "win"; // not seen on board
-        boardSpaces[5] = "skipfrom1";
-        boardSpaces[57] = "skipto1";
-        boardSpaces[32] = "skipfrom2";
-        boardSpaces[45] = "skipto2";
-        boardSpaces[46] = "stop1";
-        boardSpaces[84] = "stop2";
-        boardSpaces[119] = "stop3";
+//        boardSpaces[5] = "skipfrom1";
+//        boardSpaces[57] = "skipto1";
+//        boardSpaces[32] = "skipfrom2";
+//        boardSpaces[45] = "skipto2";
+//        boardSpaces[46] = "stop1";
+//        boardSpaces[84] = "stop2";
+//        boardSpaces[119] = "stop3";
         boardSpaces[8] = "plum";
         boardSpaces[18] = "candycane";
         boardSpaces[41] = "gumdrop";
