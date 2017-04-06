@@ -27,7 +27,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
     private String playerCountArray[] = new String[] {"2","3","4"};
     private ArrayList<String> colorPieces;
     private ArrayList<Player> players;
-    private int playerCount, currentTurn;
+    private int playerCount, currentTurn, turnCtr;
     Toast m_currentToast;
 
 
@@ -55,6 +55,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
         players = new ArrayList<>();
         currentTurn = 0;
+        turnCtr = 0;
 
         //gets the previously created intent
         Intent intent = getIntent();
@@ -72,7 +73,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
         }
 
         //This needs to be in onCreate, not onStart
-        pickPlayerCount();
+        askForAI();
     }
 
     @Override
@@ -247,8 +248,13 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
     public void nextTurn() {
         currentTurn++;
+        turnCtr++;
 
         if (currentTurn > playerCount) currentTurn = 1;
+
+        if (turnCtr == 11) {
+            delcareWinnder(2);
+        }
 
         bannerText.setText("Player " + currentTurn + ", draw a card!");
     }
@@ -260,6 +266,25 @@ public class GameActivity extends Activity implements View.OnClickListener {
         }
         m_currentToast = Toast.makeText(this, message, Toast.LENGTH_LONG);
         m_currentToast.show();
+    }
+
+    public void askForAI() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Play other players or computer?")
+                .setPositiveButton("Other Players", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        pickPlayerCount();
+                    }
+                })
+                .setNegativeButton("Computer", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        pickPlayerCount();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
     public void pickPlayerCount () {
@@ -294,6 +319,23 @@ public class GameActivity extends Activity implements View.OnClickListener {
         alert.show();
     }
 
-
+    public void delcareWinnder(int player) {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Player " + player + " has won the game! Return to main menu?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 
 }

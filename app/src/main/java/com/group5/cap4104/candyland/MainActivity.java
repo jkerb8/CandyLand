@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    Button startGameBtn, continueGameBtn, settingsBtn, logOutBtn;
+    Button startGameBtn, continueGameBtn, onlineGameBtn, settingsBtn, logOutBtn;
     Boolean loggedIn;
 
     @Override
@@ -28,6 +28,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         // Assigning the buttons to their views and setting the onClickListeners
         startGameBtn = (Button) findViewById(R.id.startGameBtn);
         continueGameBtn = (Button) findViewById(R.id.continueGameBtn);
+        onlineGameBtn = (Button) findViewById(R.id.onlineGameBtn);
         settingsBtn = (Button) findViewById(R.id.settingsBtn);
         logOutBtn = (Button) findViewById(R.id.logoutBtn);
 
@@ -61,6 +62,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent contIntent = new Intent(MainActivity.this, GameActivity.class);
                 contIntent.putExtra("openingPastGame", "true");
                 startActivity(contIntent);
+
+                break;
+
+            case R.id.onlineGameBtn:
+                Intent onlineIntent = new Intent(MainActivity.this, GameActivity.class);
+                onlineIntent.putExtra("openingPastGame", "false");
+                startActivity(onlineIntent);
 
                 break;
 
