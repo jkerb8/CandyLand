@@ -20,7 +20,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
     private Button drawCardBtn;
     private TextView bannerText;
-    private ImageView playerTurnIV;
+    private ImageView playerTurnIV, boardIV;
     private String[] boardSpaces = new String[137];
     private String[] colors = new String[6];
     private ArrayList<Integer> drawCards = new ArrayList<>();
@@ -45,6 +45,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
         //might need to change this for each turn
         playerTurnIV = (ImageView) findViewById(R.id.playerTurnImageView);
+        boardIV = (ImageView) findViewById(R.id.board);
         //example: playerTurnIV.setImageResource(R.drawable.plumcard);
 
         colorPieces = new ArrayList<>();
@@ -85,7 +86,8 @@ public class GameActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.drawCardBtn:
-                drawCard();
+                //drawCard();
+                drawCardForVideo();
                 nextTurn();
                 break;
 
@@ -102,6 +104,129 @@ public class GameActivity extends Activity implements View.OnClickListener {
         Integer randomInt = drawCards.get(rand.nextInt(drawCards.size()));
         playerTurnIV.setImageResource(randomInt);
         drawCards.remove(randomInt);
+    }
+
+    private void drawCardForVideo() {
+        switch (turnCtr) {
+            case 0:
+                playerTurnIV.setImageResource(R.drawable.sb);
+                boardIV.setImageResource(R.drawable.board_0);
+                break;
+            case 1:
+                playerTurnIV.setImageResource(R.drawable.dr);
+                boardIV.setImageResource(R.drawable.board_1);
+                break;
+            case 2:
+                playerTurnIV.setImageResource(R.drawable.sg);
+                boardIV.setImageResource(R.drawable.board_2);
+                break;
+            case 3:
+                playerTurnIV.setImageResource(R.drawable.sy);
+                boardIV.setImageResource(R.drawable.board_3);
+                break;
+            case 4:
+                playerTurnIV.setImageResource(R.drawable.sy);
+                boardIV.setImageResource(R.drawable.board_4);
+                break;
+            case 5:
+                playerTurnIV.setImageResource(R.drawable.so);
+                boardIV.setImageResource(R.drawable.board_5);
+                break;
+            case 6:
+                playerTurnIV.setImageResource(R.drawable.sg);
+                boardIV.setImageResource(R.drawable.board_6);
+                break;
+            case 7:
+                playerTurnIV.setImageResource(R.drawable.dy);
+                boardIV.setImageResource(R.drawable.board_7);
+                break;
+            case 8:
+                playerTurnIV.setImageResource(R.drawable.sg);
+                boardIV.setImageResource(R.drawable.board_8);
+                break;
+            case 9:
+                playerTurnIV.setImageResource(R.drawable.sb);
+                boardIV.setImageResource(R.drawable.board_9);
+                break;
+            case 10:
+                playerTurnIV.setImageResource(R.drawable.sy);
+                boardIV.setImageResource(R.drawable.board_10);
+                break;
+            case 11:
+                playerTurnIV.setImageResource(R.drawable.so);
+                boardIV.setImageResource(R.drawable.board_11);
+                break;
+            case 12:
+                playerTurnIV.setImageResource(R.drawable.so);
+                boardIV.setImageResource(R.drawable.board_12);
+                break;
+            case 13:
+                playerTurnIV.setImageResource(R.drawable.peanutcard);
+                boardIV.setImageResource(R.drawable.board_13);
+                break;
+            case 14:
+                playerTurnIV.setImageResource(R.drawable.sg);
+                boardIV.setImageResource(R.drawable.board_14);
+                break;
+            case 15:
+                playerTurnIV.setImageResource(R.drawable.dp);
+                boardIV.setImageResource(R.drawable.board_15);
+                break;
+            case 16:
+                playerTurnIV.setImageResource(R.drawable.sy);
+                boardIV.setImageResource(R.drawable.board_16);
+                break;
+            case 17:
+                playerTurnIV.setImageResource(R.drawable.sp);
+                boardIV.setImageResource(R.drawable.board_17);
+                break;
+            case 18:
+                playerTurnIV.setImageResource(R.drawable.candycanecard);
+                boardIV.setImageResource(R.drawable.board_18);
+                break;
+            case 19:
+                playerTurnIV.setImageResource(R.drawable.sp);
+                boardIV.setImageResource(R.drawable.board_19);
+                break;
+            case 20:
+                playerTurnIV.setImageResource(R.drawable.sg);
+                boardIV.setImageResource(R.drawable.board_20);
+                break;
+            case 21:
+                playerTurnIV.setImageResource(R.drawable.db);
+                boardIV.setImageResource(R.drawable.board_21);
+                break;
+            case 22:
+                playerTurnIV.setImageResource(R.drawable.so);
+                boardIV.setImageResource(R.drawable.board_22);
+                break;
+            case 23:
+                playerTurnIV.setImageResource(R.drawable.sp);
+                boardIV.setImageResource(R.drawable.board_23);
+                break;
+            case 24:
+                playerTurnIV.setImageResource(R.drawable.sy);
+                boardIV.setImageResource(R.drawable.board_24);
+                break;
+            case 25:
+                playerTurnIV.setImageResource(R.drawable.blank);
+                showMessage("Skip, No draw");
+                boardIV.setImageResource(R.drawable.board_25);
+                break;
+            case 26:
+                playerTurnIV.setImageResource(R.drawable.sr);
+                boardIV.setImageResource(R.drawable.board_26);
+                break;
+            case 27:
+                playerTurnIV.setImageResource(R.drawable.sb);
+                boardIV.setImageResource(R.drawable.board_27);
+                break;
+            default:
+                delcareWinnder(2);
+                break;
+        }
+
+        turnCtr++;
     }
 
     @Override
@@ -248,13 +373,8 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
     public void nextTurn() {
         currentTurn++;
-        turnCtr++;
 
         if (currentTurn > playerCount) currentTurn = 1;
-
-        if (turnCtr == 11) {
-            delcareWinnder(2);
-        }
 
         bannerText.setText("Player " + currentTurn + ", draw a card!");
     }
