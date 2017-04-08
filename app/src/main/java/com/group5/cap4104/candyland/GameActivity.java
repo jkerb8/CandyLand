@@ -30,8 +30,6 @@ public class GameActivity extends Activity implements View.OnClickListener {
     private int playerCount, currentTurn, turnCtr;
     Toast m_currentToast;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
